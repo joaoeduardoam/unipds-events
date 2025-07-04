@@ -10,6 +10,7 @@ import java.util.*;
 @Table(name = "users")
 @Getter
 @Setter
+@ToString
 public class User {
 
     @Id

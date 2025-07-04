@@ -10,6 +10,7 @@ import java.util.*;
 @Table(name = "conferences")
 @Getter
 @Setter
+@ToString
 public class Conference {
 
     @Id

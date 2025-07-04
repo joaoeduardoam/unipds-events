@@ -5,20 +5,31 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.*;
-import java.util.*;
 
 @Entity
 @Table(name = "subscriptions")
 @Getter
 @Setter
+@ToString
 public class Subscription {
 
-    @Id
+    @EmbeddedId
     private SubscriptionId id;
 
     private LocalDateTime createdAt;
 
     private Integer level;
+
+    public User getUser() {
+        return id.getUser();
+    }
+
+
+    public Session getSession() {
+        return id.getSession();
+    }
+
+
 
 
 }

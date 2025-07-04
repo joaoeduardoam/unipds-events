@@ -6,6 +6,8 @@ import lombok.*;
 
 
 @Embeddable
+@Getter
+@Setter
 public class SubscriptionId {
 
     @ManyToOne
