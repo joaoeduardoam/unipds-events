@@ -2,6 +2,7 @@ package com.joaoeduardoam.unipds.events.model;
 
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.*;
 import lombok.*;
 
 import java.util.*;
@@ -19,7 +20,13 @@ public class User {
 
     private String name;
 
+    @NotNull
     private String email;
+
+    @NotNull
+    private String password;
+
+
 
 //    @ManyToMany(mappedBy = "users")
 //    private List<Session> sessions;
